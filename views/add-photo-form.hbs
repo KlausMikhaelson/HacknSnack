@@ -1,0 +1,37 @@
+<h2>Upload your photo</h2>
+<form class="form-horizontal" id="uploadPhotoForm" role="form"
+      enctype="multipart/form-data" method="POST"
+      action="/add-photo">
+    <div class="container" id="uploadFileContainer">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <div class="form-group">
+        <label for="fieldName" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control"
+                   id="fieldName" name="name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="fieldEmail" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-4">
+            <input class="form-control" required
+                   id="fieldEmail" name="email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="fieldPhoto" class="col-sm-2 control-label">Vacation
+            photo</label>
+        <div class="col-sm-4">
+            <input type="file" class="form-control" required accept="image/*"
+                   id="fieldPhoto" name="photo">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </div>
+    </div>
+</form>
+
+<script src="/javascripts/uploadFileHelper.js"></script>

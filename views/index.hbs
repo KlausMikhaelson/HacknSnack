@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<a href="/add-photo" class="btn-primary btn">Add own photo</a>
+
+{{#each blogs}}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{blogTitle}}</h5>
+        <p class="card-text">{{blogText}}</p>
+        <a href="/blogs/{{@index}}" class="btn btn-primary">View Blog</a>
+    </div>
+</div>
+{{/each}}
